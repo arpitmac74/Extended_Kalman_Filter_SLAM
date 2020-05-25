@@ -10,3 +10,7 @@ Basic algorithm is based on “Robot Mapping - WS 2013/14,” 21 10 2018. [Onlin
 ### Usage
 
 Make sure `numpy` and `matplotlib` are installed and run `slam.py`.
+
+<p align="center">
+<img src="images/static_landmarks.png">
+</p>
