@@ -1,6 +1,5 @@
-## EKF SLAM algorithm for Sensor Signal and Data Processing (EE5020)
+## EKF SLAM algorithm for Sensor Signal
 
-![EKF SLAM Demo](https://github.com/arpitmac74/EKF-SLAM/blob/master/images/static_landmarks.png)
 
 Basic algorithm creates robot object, generates (semi) random trajectory and estimates trajectory based on range-bearing measurements.
 Advanced algorithm is able to generate moving landmarks, but landmark classification has not been implemented.
