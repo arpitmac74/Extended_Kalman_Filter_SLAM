@@ -1,0 +1,29 @@
+
+import numpy as np
+from robot import Robot
+n = 50 # number of static landmarks
+mapsize = 40
+landmark_xy = mapsize*(np.random.rand(n,2)-0.5)
+landmark_id = np.transpose([np.linspace(0,n-1,n,dtype='uint16')])
+ls = np.append(landmark_xy,landmark_id,axis=1)
+
+k = 1 # number of dynamic landmarks
+vm = 5 # velocity multiplier
+landmark_xy = mapsize*(np.random.rand(k,2)-0.5)
+landmark_v = np.random.rand(k,2)-0.5
+landmark_id = np.transpose([np.linspace(n,n+k-1,k,dtype='uint16')])
+ld = np.append(landmark_xy,landmark_id,axis=1)
+ld = np.append(ld,landmark_v,axis=1)
+
+fov = 80
+
+Rt = 5*np.array([[0.1,0,0],
+               [0,0.01,0],
+               [0,0,0.01]])
+Qt = np.array([[0.01,0],
+               [0,0.01]])
+
+motion_noise = np.matmul(np.random.randn(1,3),Rt)[0]
+u = np.zeros((30,3))
+
+print(u[:,0])
